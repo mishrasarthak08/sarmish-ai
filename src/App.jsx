@@ -52,13 +52,31 @@ function App() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <motion.h1
-        initial={{ opacity: 0, y: -30 }}
+      <motion.div 
+        className="title-container"
+        initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
+        transition={{ duration: 0.8 }}
       >
-        Sarmish AI
-      </motion.h1>
+        <motion.div 
+          className="arc-reactor"
+          animate={{ 
+            rotate: 360,
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ 
+            duration: 3,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        >
+          <div className="arc-reactor-core"></div>
+          <div className="arc-reactor-ring"></div>
+          <div className="arc-reactor-ring"></div>
+          <div className="arc-reactor-ring"></div>
+        </motion.div>
+        <h1>Sarmish AI</h1>
+      </motion.div>
 
       <motion.form 
         onSubmit={handleSubmit}
