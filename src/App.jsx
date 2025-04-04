@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { generateResponse } from './services/geminiService';
 import { motion, AnimatePresence } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
 import './App.css';
 
 function App() {
@@ -150,13 +151,14 @@ function App() {
             >
               Response:
             </motion.h2>
-            <motion.p
+            <motion.div
+              className="markdown-content"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              {response}
-            </motion.p>
+              <ReactMarkdown>{response}</ReactMarkdown>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
