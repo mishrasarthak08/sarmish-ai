@@ -75,7 +75,13 @@ function App() {
           <div className="arc-reactor-ring"></div>
           <div className="arc-reactor-ring"></div>
         </motion.div>
-        <h1>Sarmish AI</h1>
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          Sarmish AI
+        </motion.h1>
       </motion.div>
 
       <motion.form 
