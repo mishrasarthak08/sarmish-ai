@@ -2,6 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import './App.css';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
+import * as THREE from 'three';
+import p5 from 'p5';
+import VANTA from 'vanta';
 
 function App() {
   const [prompt, setPrompt] = useState('');
@@ -13,6 +16,7 @@ function App() {
   useEffect(() => {
     const effect = VANTA.WAVES({
       el: vantaRef.current,
+      THREE: THREE,
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
