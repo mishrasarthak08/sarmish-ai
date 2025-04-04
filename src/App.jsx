@@ -40,7 +40,7 @@ function App() {
     setResponse('');
 
     try {
-      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyDxQq3Qq3Qq3Qq3Qq3Qq3Qq3Qq3Qq3Qq3Q', {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
