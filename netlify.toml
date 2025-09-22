@@ -4,6 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  ROLLUP_SKIP_NODE_NATIVE = "true"
+  NPM_CONFIG_IGNORE_OPTIONAL = "false"
 
 [[redirects]]
   from = "/*"
